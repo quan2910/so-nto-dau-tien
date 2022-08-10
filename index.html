@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkNT(num) {
+        let count = 0;
+        let c = 0;
+        for (let i = 2; i < 1000; i++) {
+            if (c < num) {
+                for (let j = 1; j <= i; j++) {
+                    if (i % j == 0) {
+                        count++;
+                    }
+                }
+                if (count == 2) {
+                    document.write(i + "<br>");
+                    c++
+                }
+                count = 0;
+            } else {
+                break;
+            }
+        }
+    }
+    let num = parseInt(prompt("Nhap so luong so nguyen to"))
+    checkNT(num);
+</script>
+</body>
+</html>
